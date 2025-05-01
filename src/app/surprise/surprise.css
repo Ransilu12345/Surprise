@@ -196,7 +196,7 @@ body {
   height: 11vmin;
   border-radius: 51% 49% 47% 53% / 44% 45% 55% 69%;
   background-color: #a7ffee;
-  background-image: linear-gradient(to top, #54b8aa, #a7ffee);
+  background-image: linear-gradient(to top, #fdd835, #fff176);
   transform-origin: bottom center;
   opacity: 0.9;
   box-shadow: inset 0 0 2vmin rgba(255, 255, 255, 0.5);
@@ -220,7 +220,7 @@ body {
   transform-origin: bottom left;
   border-radius: 4vmin 10vmin 4vmin 4vmin;
   transform: translate(-0%, 18%) rotateX(70deg) rotate(-43deg);
-  background-image: linear-gradient(to top, #39c6d6, #a7ffee);
+  background-image: linear-gradient(to top, #fdd835, #fff176);
   z-index: 1;
   opacity: 0.8;
 }
