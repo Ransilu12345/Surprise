@@ -42,7 +42,7 @@ export default function SurprisePage() {
       <div className="night">
 
       {/* Countdown Timer */}
-      <div className="countdown-timer">
+      <div className="countdown-timer text-white">
         <p>Redirecting in {countdown} seconds...</p>
       </div>
 

@@ -42,8 +42,8 @@ const EnvelopePopup = () => {
           <div className="top-flap"></div>
           <div className="body"></div>
           <div className="letter">
-          <p>Happy Birthday! 🎂💖<br />Wishing you endless success and happiness...
-          May every step you take lead you to greater achievements. ✨🪄</p>
+          <p>Happy Bornday Pawani! 🎂💖<br />Wishing you lots of success and happiness always!
+May every little step you take bring you closer to your biggest dreams. ✨🪄💫</p>
           </div>
         </div>
       )}
