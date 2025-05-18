@@ -1,0 +1,101 @@
+.envelope-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+  }
+  
+  .envelope {
+    position: relative;
+    display: flex;
+    width: 500px;
+    height: 200px;
+    background: #fff;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    cursor: pointer;
+    transform: scale(0);
+    animation: popIn 1s forwards;
+    pointer-events: auto;
+  }
+  
+  @keyframes popIn {
+    to { transform: scale(1); }
+  }
+  
+  .top-flap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: #ff69b4;
+    border-bottom: 2px solid #ccc;
+    clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+    transition: transform 1s ease;
+    transform-origin: top center;
+  }
+  
+  .body {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    border-radius: 8px;
+  }
+  
+  .letter {
+    position: absolute;
+    color: #ff69b4;
+    text-shadow: 0 0 10px #fff, 0 0 20px #ff69b4, 0 0 30px #ff69b4;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) translateY(100%);
+    width: 90%;
+    background: #fff8f8;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.2rem;
+    opacity: 0;
+    transition: all 1s ease;
+  }
+
+    @keyframes glow {
+    from { text-shadow: 0 0 5px #fff, 0 0 10px #ff69b4; }
+    to { text-shadow: 0 0 20px #fff, 0 0 40px #ff69b4; }
+  }
+  
+  .envelope.open .top-flap {
+    transform: rotateX(180deg);
+  }
+  
+  .envelope.open .letter {
+    transform: translate(-50%, -50%) translateY(-60px);
+    opacity: 1;
+  }
+  
+  /* Sparkles */
+  .envelope-container::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255,255,255,0.5) 1px, transparent 1px);
+    background-size: 20px 20px;
+    opacity: 0.4;
+    animation: sparkle 5s linear infinite;
+    pointer-events: none;
+  }
+  
+  @keyframes sparkle {
+    from { background-position: 0 0; }
+    to { background-position: 100px 100px; }
+  }
+  
