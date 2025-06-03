@@ -6,7 +6,7 @@ import { useRouter } from 'next/navigation';
 
 export default function SurprisePage() {
   const [isRedirecting, setIsRedirecting] = useState(false);
-  const [countdown, setCountdown] = useState(15); // Timer starts at 60 seconds
+  const [countdown, setCountdown] = useState(5); // Timer starts at 5 seconds
   const router = useRouter();
 
 
@@ -27,8 +27,8 @@ export default function SurprisePage() {
       setIsRedirecting(true); // Show the "Redirecting" message
       setTimeout(() => {
         router.push('/envelop'); // Redirect to the main page
-      }, 2000); // Wait 2 seconds before redirecting
-    }, 15000);
+      }, 1000); // Wait 1 second before redirecting
+    }, 5000);
 
     // Cleanup the timer when the component unmounts
     return () => {
